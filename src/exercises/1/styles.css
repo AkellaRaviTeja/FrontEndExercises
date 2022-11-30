@@ -1,0 +1,82 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+#navigator {
+    position: absolute; 
+    top: 20px;
+    right: 52px;
+}
+
+.content {
+    display: grid;
+}
+
+.search {
+    text-align: center;
+}
+
+.grid-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+.input-text {
+    margin: 0 auto;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid gray;
+    width: 100%;
+}
+
+.input-text:hover, .input-text:focus {
+    border-color: blue;
+}
+
+.input-text:focus {
+    outline: none;
+    border: 2px solid blue;
+}
+
+.btn-submit {
+    margin: 0 auto;
+    width: 50%;
+    padding: 8px 8px;
+    border-radius: 50vh;
+    background-color: blue;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+}
+
+.btn-submit:focus {
+    outline: none;
+}
+
+.form {
+    display: grid;
+}

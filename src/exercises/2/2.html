@@ -19,3 +19,71 @@ Below is how employee data looks like
 - The data once set, should be available only in that tab. If the same html is opened in a new tab, data should not be available
 - HINT : Use browsers session storage.
 -->
+
+<!DOCT
+
+YPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Search User</title>
+	<link rel="stylesheet" href="../1/styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<div id="navigator">
+			<a href="http://localhost:5500/src/exercises/2/insert.html">Insert Data</a>
+		</div>
+		<div class="content">
+			<h1>Search Employee</h1>
+			<div class="grid-item">
+				<input class="input-text" type="number" placeholder="Enter employee id...">
+			</div>
+			<div class="grid-item">
+				<button class="btn-submit" onclick="searchHandler()">
+					Search
+				</button>
+			</div>
+			<h1 id="search-result-title" style="visibility: hidden;">Search Results: </h1>
+			<div id="search-error-message" class="content"></div>
+			<div id="search-result" class="content" style="visibility: hidden;">
+				<p id="search-id"></p>
+				<p id="search-name"></p>
+				<p id="search-doj"></p>
+				<p id="search-experience"></p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		document.getElementsByClassName('btn-submit')[0].addEventListener('click', (e) => {
+			e.preventDefault();
+			const id = document.getElementsByClassName('input-text')[0].value;
+			const items = JSON.parse(sessionStorage.getItem('empData'));
+			if (items !== null && items !== undefined) {
+				const [item] = items.filter((item) => item.id === id);
+				if (item) {
+					document.getElementById('search-id').innerHTML = `Id: <span style="font-size: 20px; font-weight: 600;">${item.id}</span>`;
+					document.getElementById('search-name').innerHTML = `Name: <span style="font-size: 20px; font-weight: 600;">${item.name}</span>`;
+					document.getElementById('search-doj').innerHTML = `DOJ: <span style="font-size: 20px; font-weight: 600;">${item.DOJ}</span>`;
+					document.getElementById('search-experience').innerHTML = `Experience: <span style="font-size: 20px; font-weight: 600;">${item.experience}</span>`;
+					document.getElementById('search-result').style.removeProperty('visibility');
+					document.getElementById('search-result-title').style.removeProperty('visibility');
+				}
+				else {
+					console.log("hellow")
+					document.getElementById('search-error-message').innerHTML = '<h5 style="text-align: center;">404! Employee not found!</h5>';
+				}
+			}
+			else {
+				alert("No data present to fetch")
+			}
+		})
+	</script>
+</body>
+
+</html>
