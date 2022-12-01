@@ -2,3 +2,60 @@
 Create a html page with 4 divs. One inside other and centered in the page.
 Check the sample image for reference.
 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Divs</title>
+</head>
+<body>
+    <div class="first box">
+        <div class="second box">
+            <div class="third box">
+                <div class="fourth box">
+                    <!-- Here we go -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .first {
+            height: 80vh;
+            width: 80vw;
+            background-color: #004aad;
+        }
+        .second {
+            height: 60vh;
+            width: 60vw;
+            background-color: #7ed957;
+        }
+        .third {
+            height: 40vh;
+            width: 40vw;
+            background-color: #ff1616;
+        }
+        .fourth {
+            height: 20vh;
+            width: 20vw;
+            background-color: #919191;
+        }
+    </style>
+</body>
+</html>
