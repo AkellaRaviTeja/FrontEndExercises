@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Employee Data</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="navigator">
+            <a href="http://localhost:5500/src/exercises/1/1.html">Search Employee</a>
+        </div>
+        <div class="content">
+            <h1>Insert Employee Data<span style="font-size: 18px;">(JSON)</span></h1>
+            <form class="form">
+                <label>Id :</label>
+                <div class="grid-item">
+                    <input type="number" class="input-text" name="id" id="id" placeholder="eg: 1125" required />
+                </div>
+                <label>Name:</label>
+                <div class="grid-item">
+                    <input type="text" class="input-text" name="name" id="name" placeholder="eg: John Doe" required />
+                </div>
+                <label>Date of joining (DOJ):</label>
+                <div class="grid-item">
+                    <input type="date" class="input-text" name="doj" id="doj" placeholder="eg: 01/01/2001" required />
+                </div>
+                <label>Experience (in yrs):</label>
+                <div class="grid-item">
+                    <input type="number" class="input-text" name="experience" id="experience" placeholder="eg: 2" required />
+                </div>
+                <div class="grid-item">
+                    <input class="btn-submit" type="submit" value="INSERT">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementsByClassName('form')[0].addEventListener('submit', (e) => {
+            let id = document.getElementById('id').value;
+            let name = document.getElementById('name').value;
+            let DOJ = document.getElementById('doj').value;
+            let experience = document.getElementById('experience').value;
+            let data = []
+            if(localStorage.hasOwnProperty('empData')) {
+                data = JSON.parse(localStorage.getItem('empData'));
+                data.push({
+                    id, name, DOJ, experience
+                });
+            }
+            else {
+                data = [{
+                    id, name, DOJ, experience
+                }]
+            }
+            localStorage.setItem('empData', JSON.stringify(data));
+            alert("success")
+        })
+    </script>
+</body>
+</html>

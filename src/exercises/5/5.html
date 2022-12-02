@@ -1,2 +1,61 @@
 <!--Create a html page with 4 divs, each at one corner. Height and Width of each div is 10px,10px
 Check the sample image for reference.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Between</title>
+</head>
+<body>
+    <div class="box one"></div>
+    <div class="box two"></div>
+    <div class="box three"></div>
+    <div class="box four"></div>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        .box {
+            height: 10px;
+            width: 10px;
+        }
+        
+        .one {
+            background: red;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .two {
+            background: blue;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        
+        .three {
+            background: greenyellow;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .four {
+            background: yellow;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+    </style>
+</body>
+</html>

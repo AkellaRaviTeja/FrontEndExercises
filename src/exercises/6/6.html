@@ -1,2 +1,59 @@
 <!--Create a navbar. Navbar(header) should contain 3 links Home,Blog,About. Aligned to the left.
 On hover links should highlight.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="title">
+            <h2>LOGO</h2>
+        </div>
+        <div class="menu">
+            <a id="home" href="/">Home</a>
+            <a id="blog" href="/blog">Blog</a>
+            <a id="about" href="/about">About</a>
+        </div>
+    </nav>
+
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        .navbar {
+            padding: 0 12vw;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 14px 4px #D4D4D4;
+        }
+
+        .menu {
+            display: flex;
+            gap: 18px;
+        }
+
+        a {
+            height: 100%;
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        a:hover {
+            color: orange;
+            scale: 1.01;
+        }
+
+    </style>
+</body>
+</html>
