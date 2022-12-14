@@ -1,0 +1,16 @@
+
+{
+    "scripts": {
+        "1": "node main1.js",
+        "2": "node main2.js",
+        "3": "node main3.js",
+        "4": "node main4.js",
+        "5": "node main5.js",
+        "6": "node main6.js",
+        "7": "node main7.js",
+        "8": "node main8.js"
+    },
+    "dependencies": {
+        "puppeteer": "19.4.0"
+    }
+}

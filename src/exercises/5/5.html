@@ -1,2 +1,53 @@
 <!--Create a html page with 4 divs, each at one corner. Height and Width of each div is 10px,10px
 Check the sample image for reference.-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+      }
+      .A,
+      .B,
+      .C,
+      .D {
+        width: 25%;
+        height: 25%;
+        position: absolute;
+      }
+      .A {
+        top: 0px;
+        left: 0px;
+        background-color: red;
+      }
+      .B {
+        top: 0px;
+        right: 0px;
+        background-color: blue;
+      }
+      .C {
+        bottom: 0px;
+        left: 0px;
+        background-color: greenyellow;
+      }
+      .D {
+        bottom: 0px;
+        right: 0px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="A">A</div>
+      <div class="B">B</div>
+      <div class="C">C</div>
+      <div class="D">D</div>
+    </div>
+  </body>
+</html>

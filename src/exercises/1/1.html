@@ -19,3 +19,43 @@ Below is how employee data looks like
 - The data once set, should be available even after the browser is closed and reopened.
 - HINT : Use browsers local storage.
 -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      label {
+        display: inline-block;
+        width: 200px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pages">
+      <a href="./page2.html">Page2</a></div><br>	
+    </div>
+    <div>
+      <label for="Id">Id</label>
+      <input type="text" id="Id" required /><br />
+      <label for="Enter">Click to store</label>
+      <button id="submit">submit</button>
+    </div>
+    <div id="output"></div>
+  </body>
+  <script>
+    let data = document.getElementById("submit");
+    data.addEventListener("click", () => {
+      let id = document.getElementById("Id").value;
+      let obj = JSON.parse(localStorage.getItem(id));
+      let output = `
+    <p>Name of the employee : ${obj.name}</p>
+    <p>ID of the employee : ${obj.id}</p>
+    <p>DOB of the employee : ${obj.DOB}</p>
+    <p>Experience of the employee : ${obj.experience}</p>`;
+      document.getElementById("output").innerHTML = output;
+    });
+  </script>
+</html>

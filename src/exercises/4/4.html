@@ -1,2 +1,61 @@
 <!--Create a html page with 4 divs, each at one corner. All the divs should occupy 100% space with each div occupying 25% of the space.
 Check the sample image for reference.-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        width: 100%;
+        height: 100%;
+      }
+      .A {
+        width: 100%;
+        height: 50%;
+      }
+      .Aa {
+        width: 50%;
+        height: 100%;
+        float: left;
+        background-color: red;
+      }
+      .Ab {
+        width: 50%;
+        height: 100%;
+        float: right;
+        background-color: violet;
+      }
+      .B {
+        width: 100%;
+        height: 50%;
+      }
+      .Ba {
+        width: 50%;
+        height: 100%;
+        float: left;
+        background-color: yellow;
+      }
+      .Bb {
+        width: 50%;
+        height: 100%;
+        float: right;
+        background-color: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="A">
+        <div class="Aa"></div>
+        <div class="Ab"></div>
+      </div>
+      <div class="B">
+        <div class="Ba"></div>
+        <div class="Bb"></div>
+      </div>
+    </div>
+  </body>
+</html>
